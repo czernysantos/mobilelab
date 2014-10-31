@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Mylokal.ph | Food & Drinks</title> 
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png"/>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700"> -->
+    <link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css">
+    <script src="assets/jqm/js/jquery.js"></script>
+    <script src="assets/jqm/_assets/js/index.js"></script>
+    <script src="assets/jqm/js/jquery.mobile-1.4.2.min.js"></script>
+    <!-- scripts -->
+    <script type="text/javascript" src="js/mylokaljson.js"></script>
+    <script type="text/javascript" src="js/jquery.mylokaljson.js"></script>
+  
+  
+   <!-- <link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile.css">
+    <link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css"> -->
+    <!-- scripts -->
+
+    
+    <!--<script src="assets/jqm/external/jquery/jquery.js"></script>
+    <script src="assets/jqm/_assets/js/"></script>
+    <script src="assets/jqm/js/"></script>-->
+
+
+   
+</head> 
+
+<body>
+
+<div data-role="page">
+    
+   <!-- header -->
+    <!-- <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="b" style="background: -webkit-gradient(linear, center top, center bottom, from(#738aba), to(#2c4987));
+background: -webkit-linear-gradient(#738aba, #2c4987);
+border-bottom: 1px solid #111a33;
+-webkit-box-shadow: inset 0 1px 1px -1px #fff;
+-webkit-box-sizing: border-box;" data-position="fixed">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;"></h1>
+         <a href="index.html" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);" data-role="button" role="button">home</a>
+         <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);">back</a> 
+    </div> -->
+    <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="d" data-position="fixed">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;" alt="Mylokal.ph"></h1>
+        <a href="#nav-panel" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" data-role="button" role="button">menu</a>
+        <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text">back</a> 
+    </div>
+    
+    
+	
+    <div data-role="content">
+    
+ <ul data-role="listview" data-inset="true" class="secondaryitemul ui-listview ui-listview-inset">
+    <li class="ui-li-has-thumb secondaryitemli  secondaryitemlifirst">
+    <a href="breadandcoffee.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #c002b6; margin-bottom: 8px;">
+        <img src="assets/images/fd/breadandcoffee.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Bread & Coffee</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli">
+        <a href="canteeneatery.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false"  style="background-color: #5dbe00; margin-bottom: 8px;">
+        <img src="assets/images/fd/eatery.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Canteen & Eatery</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="cateringservices.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #3faaf5; margin-bottom: 8px;">
+        <img src="assets/images/fd/catering.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Catering Services</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="conveniencestore.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #70c300; margin-bottom: 8px;">
+         <img src="assets/images/fd/convenientstore.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Convenience Store</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="fastfood.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false"  style="background-color: #3faaf5; margin-bottom: 8px;">
+        <img src="assets/images/fd/fastfood.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Fastfood</h2></a>
+    </li>	
+    <li class="ui-li-has-thumb secondaryitemli"><a href="foodcart.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #007be9; margin-bottom: 8px;">
+         <img src="assets/images/fd/foodcart.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Food Cart</h2></a>
+    </li>
+        <li class="ui-li-has-thumb secondaryitemli"><a href="meatfishandproduce.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #1566ff; margin-bottom: 8px;">
+        <img src="assets/images/fd/meatfish.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Meat, Fish & Produce</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="restaurantandbar.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false"  style="background-color: #ffc700; margin-bottom: 8px;">
+        <img src="assets/images/fd/restobar.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Restaurant & Bar</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="waterrefillingstation.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #017cea; margin-bottom: 8px;">
+        <img src="assets/images/fd/waterrefilling.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Water Refilling Station</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="winesandspirits.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #8bb400; margin-bottom: 8px;">
+        <img src="assets/images/fd/wines.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Wines & Spirits</h2></a>
+    </li>
+	</ul>
+
+	</div><!-- /content -->
+
+	    <!-- footer -->
+     <div class="ui-footer ui-bar-a" data-role="footer" data-theme="a">
+    	<h1 class="ui-title">© 2013 Mylokal.ph - Powered by Mobile Lab Inc</h1>
+<!--<a href="http://mylokal.ph/aboutus" data-theme="b" data-icon="info" data-iconpos="left" data-shadow="false" data-iconshadow="false" data-ajax="false" rel="external" class="ui-link ui-btn-left ui-btn ui-icon-infotab ui-corner-all" data-role="button">About Us</a> -->
+	</div><!-- /footer -->
+
+
+	
+</div><!-- /page -->
+
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+	    <link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile-1.4.2.min.css">
+		<link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css">
+        
+        <title>MYLOKAL.PH</title>
+   		<script src="assets/jqm/js/jquery.js"></script>
+		<script src="assets/jqm/js/jquery.mobile-1.4.2.min.js"></script>
+	    <script src="xdomain.js"
+          slave="http://apps.mylokal.ph/toapp/index.html"></script>
+		<script>
+		function onclick_a(){
+		alert(window.localStorage.getItem('advertising'));
+		//window.localStorage.setItem('advertising', ('http://apps.mylokal.ph/toapp/advertising.txt').html());
+		}
+        </script>
+       
+
+    </head>
+    <body>
+    <div data-role="page" id="home"><!-- page -->
+ <!-- header -->
+    <div class="ui-header ui-bar-d" role="banner" data-role="header" data-theme="d" data-position="fixed">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;" alt="logo"></h1>
+      <!--   <a href="index.html" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);" data-role="button" role="button">home</a>
+         <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);">back</a> -->
+    </div>
+    
+    <!-- slider -->
+<script src="assets/slider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript">
+			$(window).load(function() {
+				$('.flexslider').flexslider({
+				  animation: "slide",
+				  controlsContainer: ".flex-container"
+			  });
+			});
+        
+		</script>
+
+    <div class="flex-container" style="margin: 10px 7px;">
+		<div class="flexslider">
+		    <ul class="slides">
+		    	<li>
+		    		<img src="assets/images/1.jpg" alt="slide">
+		    		<!--<p class="flex-caption">SAMPLE ADS TEXT SLIDE</p> -->
+	    	  	</li>
+		    	<li>
+		    		<img src="assets/images/2.jpg" alt="slide">
+		    		<!-- <p class="flex-caption"> &laquo; Swipe Horizontally with Finger &raquo;</p> -->
+	    	  	</li>
+		    	<li>
+		    		<img src="assets/images/3.jpg" alt="slide">                </li>
+		    	<li>
+		    		<img src="assets/images/4.jpg" alt="slide">                </li>
+		    </ul>
+		</div>
+	</div>
+ <!--<div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>-->
+   
+   <!-- <ul id="advjson" data-role="listview" style="display:block;"></ul> -->
+  <!-- <a href="#" onclick="savels();">savedata</a>-->
+    
+	<div data-role="content" style="padding:5px" >
+   	<ul class="gallery">
+	<li><a href="generalservices.html" rel="external"><img src="assets/images/generalservices.png" alt="General Services" /></a></li>
+	<li><a href="localindustries.html" rel="external"><img src="assets/images/localindustries.png" alt="Local Industries" /></a></li>
+    <li><a href="food-drinks.html" rel="external"><img src="assets/images/foodanddrinks.png" alt="Food and Drinks" /></a></li>
+	<li><a href="lodging.html" rel="external"><img src="assets/images/lodging.png" alt="Lodging" /></a></li>
+    <li><a href="govt-services.html" rel="external"><img src="assets/images/govservices.png" alt="Government Services" /></a></li>
+	<li><a href="tourist-spot.html" rel="external"><img src="assets/images/tourism.png" alt="Tourism" /></a></li>
+	<li><a href="shops.html" rel="external"><img src="assets/images/shops.png" alt="Shops" /></a></li>
+	<li><a href="transportation.html" rel="external"><img src="assets/images/transpo.png" alt="Transportation" /></a></li>
+    <li><a href="health-wellness.html" rel="external"><img src="assets/images/healthandmedicine.png" alt="Health and Medicine" /></a></li>
+	<li><a href="bsf.html" rel="external"><img src="assets/images/bsf.png" alt="Beauty, Style & Fitness" /></a></li>
+    <li><a href="peso.html" rel="external"><img src="assets/images/bank.png" alt="Peso" /></a></li>
+	<li><a href="sports-recreation.html" rel="external"><img src="assets/images/sportsandrecreation.png" alt="Entertainment & Sports" /></a></li>
+	<li><a href="classified.html" rel="external"><img src="assets/images/classified.png" alt="Classified Ads" /></a></li>
+	<li><a href="learning-center.html" rel="external"><img src="assets/images/learningcenters.png" alt="Learning Centers" /></a></li>
+    <li><a href="#" rel="external"><img src="assets/images/deals.png" alt="Deals" /></a></li>
+	<li><a href="#" rel="external"><img src="assets/images/contactus.png" alt="Contact Us" /></a></li>
+    </ul>
+   
+    <ul id="advertising" data-role="listview" style="display:none;"></ul>
+    <ul id="agri-business" data-role="listview" style="display:none;"></ul>
+    <ul id="airport" data-role="listview" style="display:none;"></ul>
+    <ul id="apartment" data-role="listview" style="display:none;"></ul>
+    <ul id="appliance-electronics" data-role="listview" style="display:none;"></ul>
+    <ul id="arcade-game" data-role="listview" style="display:none;"></ul>
+    <ul id="arena-gymnasium" data-role="listview" style="display:none;"></ul>
+    <ul id="auto-mobile-dealer" data-role="listview" style="display:none;"></ul>
+    <ul id="auto-parts-and-services" data-role="listview" style="display:none;"></ul>
+    <ul id="bank" data-role="listview" style="display:none;"></ul>
+    <ul id="barangay-hall" data-role="listview" style="display:none;"></ul>
+    <ul id="barber-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="beach-resort" data-role="listview" style="display:none;"></ul>
+    <ul id="beauty-products" data-role="listview" style="display:none;"></ul>
+    <ul id="beauty-salo" data-role="listview" style="display:none;"></ul>
+    <ul id="bed-and-breakfast" data-role="listview" style="display:none;"></ul>
+    <ul id="booking-office" data-role="listview" style="display:none;"></ul>
+    <ul id="bookstore-and-copier" data-role="listview" style="display:none;"></ul>
+    <ul id="boutique-garments" data-role="listview" style="display:none;"></ul>
+    <ul id="bread-and-coffee" data-role="listview" style="display:none;"></ul>
+    <ul id="builders-and-construction" data-role="listview" style="display:none;"></ul>
+    <ul id="bus-terminal" data-role="listview" style="display:none;"></ul>
+    <ul id="canteen-eatery" data-role="listview" style="display:none;"></ul>
+    <ul id="capitol-and-municipalhall" data-role="listview" style="display:none;"></ul>
+    <ul id="casino" data-role="listview" style="display:none;"></ul>
+    <ul id="catering-services" data-role="listview" style="display:none;"></ul>
+    <ul id="church" data-role="listview" style="display:none;"></ul>
+    <ul id="cinema" data-role="listview" style="display:none;"></ul>
+    <ul id="cleaning-and-sanitation" data-role="listview" style="display:none;"></ul>
+    <ul id="clinic" data-role="listview" style="display:none;"></ul>
+    <ul id="college-university" data-role="listview" style="display:none;"></ul>
+    <ul id="computer-services" data-role="listview" style="display:none;"></ul>
+    <ul id="condo-units" data-role="listview" style="display:none;"></ul>
+    <ul id="convenience-store" data-role="listview" style="display:none;"></ul>
+    <ul id="courier" data-role="listview" style="display:none;"></ul>
+    <ul id="daycare" data-role="listview" style="display:none;"></ul>
+    <ul id="dental" data-role="listview" style="display:none;"></ul>
+    <ul id="derma-facial-center" data-role="listview" style="display:none;"></ul>
+    <ul id="distributor" data-role="listview" style="display:none;"></ul>
+    <ul id="dorm-and-bedspace" data-role="listview" style="display:none;"></ul>
+    <ul id="driving-school" data-role="listview" style="display:none;"></ul>
+    <ul id="drugstore-medical" data-role="listview" style="display:none;"></ul>
+    <ul id="drug-testing" data-role="listview" style="display:none;"></ul>
+    <ul id="eco-adventure" data-role="listview" style="display:none;"></ul>
+    <ul id="EENT-clinic" data-role="listview" style="display:none;"></ul>
+    <ul id="event-services" data-role="listview" style="display:none;"></ul>
+    <ul id="fastfood" data-role="listview" style="display:none;"></ul>
+    <ul id="fire-and-rescue" data-role="listview" style="display:none;"></ul>
+    <ul id="flower-garden" data-role="listview" style="display:none;"></ul>
+    <ul id="foodcart" data-role="listview" style="display:none;"></ul>
+    <ul id="food-products" data-role="listview" style="display:none;"></ul>
+    <ul id="funeral-and-memorial" data-role="listview" style="display:none;"></ul>
+    <ul id="furnitures-decors" data-role="listview" style="display:none;"></ul>
+    <ul id="gadget-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="gasoline-station" data-role="listview" style="display:none;"></ul>
+    <ul id="general-merchandise" data-role="listview" style="display:none;"></ul>
+    <ul id="general-repair" data-role="listview" style="display:none;"></ul>
+    <ul id="grocery-and-supermarket" data-role="listview" style="display:none;"></ul>
+    <ul id="gym" data-role="listview" style="display:none;"></ul>
+    <ul id="handicrafts" data-role="listview" style="display:none;"></ul>
+    <ul id="hardware" data-role="listview" style="display:none;"></ul>
+    <ul id="hospital" data-role="listview" style="display:none;"></ul>
+    <ul id="hotel" data-role="listview" style="display:none;"></ul>
+    <ul id="insurance" data-role="listview" style="display:none;"></ul>
+    <ul id="internet-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="IT-BPO" data-role="listview" style="display:none;"></ul>
+    <ul id="jeepney-terminal" data-role="listview" style="display:none;"></ul>
+    <ul id="jewelry-accessories" data-role="listview" style="display:none;"></ul>
+    <ul id="junk-scrap-metal" data-role="listview" style="display:none;"></ul>
+    <ul id="laundry-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="law-office" data-role="listview" style="display:none;"></ul>
+    <ul id="lending-finance" data-role="listview" style="display:none;"></ul>
+    <ul id="lotto-outlet" data-role="listview" style="display:none;"></ul>
+    <ul id="lpg-station" data-role="listview" style="display:none;"></ul>
+    <ul id="lto-ltfrb" data-role="listview" style="display:none;"></ul>
+    <ul id="machine-welding" data-role="listview" style="display:none;"></ul>
+    <ul id="mall-shopping-center" data-role="listview" style="display:none;"></ul>
+    <ul id="manpower-services" data-role="listview" style="display:none;"></ul>
+    <ul id="manufacturer" data-role="listview" style="display:none;"></ul>
+    <ul id="meat-fish-produce" data-role="listview" style="display:none;"></ul>
+    <ul id="moneygram-remittance" data-role="listview" style="display:none;"></ul>
+    <ul id="mosques" data-role="listview" style="display:none;"></ul>
+    <ul id="motor-cycle-dealer" data-role="listview" style="display:none;"></ul>
+    <ul id="music-dance" data-role="listview" style="display:none;"></ul>
+    <ul id="music-instrument-shops" data-role="listview" style="display:none;"></ul>
+    <ul id="newspaper-and-magazine" data-role="listview" style="display:none;"></ul>
+    <ul id="ngo" data-role="listview" style="display:none;"></ul>
+    <ul id="notary-public" data-role="listview" style="display:none;"></ul>
+    <ul id="novelty-store" data-role="listview" style="display:none;"></ul>
+    <ul id="OB-GYNE" data-role="listview" style="display:none;"></ul>
+    <ul id="online-sellers" data-role="listview" style="display:none;"></ul>
+    <ul id="pasalubong-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="pawnshop" data-role="listview" style="display:none;"></ul>
+    <ul id="pediatrics" data-role="listview" style="display:none;"></ul>
+    <ul id="pet-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="pharmaceutical" data-role="listview" style="display:none;"></ul>
+    <ul id="police-station" data-role="listview" style="display:none;"></ul>
+    <ul id="post-office" data-role="listview" style="display:none;"></ul>
+    <ul id="radio-station" data-role="listview" style="display:none;"></ul>
+    <ul id="regional-govt-center" data-role="listview" style="display:none;"></ul>
+    <ul id="religious-store" data-role="listview" style="display:none;"></ul>
+    <ul id="repair-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="restaurant-and-bar" data-role="listview" style="display:none;"></ul>
+    <ul id="review-tutorial-center" data-role="listview" style="display:none;"></ul>
+    <ul id="room" data-role="listview" style="display:none;"></ul>
+    <ul id="school-bus" data-role="listview" style="display:none;"></ul>
+    <ul id="schools" data-role="listview" style="display:none;"></ul>
+    <ul id="seaport" data-role="listview" style="display:none;"></ul>
+    <ul id="spa" data-role="listview" style="display:none;"></ul>
+    <ul id="sports-hobby-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="tailoring" data-role="listview" style="display:none;"></ul>
+    <ul id="tattoo-piercing" data-role="listview" style="display:none;"></ul>
+    <ul id="taxi-terminal" data-role="listview" style="display:none;"></ul>
+    <ul id="telecommunication" data-role="listview" style="display:none;"></ul>
+    <ul id="theme-park" data-role="listview" style="display:none;"></ul>
+    <ul id="tourist-spot" data-role="listview" style="display:none;"></ul>
+    <ul id="townhouse" data-role="listview" style="display:none;"></ul>
+    <ul id="training-center" data-role="listview" style="display:none;"></ul>
+    <ul id="travel-agency" data-role="listview" style="display:none;"></ul>
+    <ul id="travel-inn" data-role="listview" style="display:none;"></ul>
+    <ul id="tv-station" data-role="listview" style="display:none;"></ul>
+    <ul id="van-terminal" data-role="listview" style="display:none;"></ul>
+    <ul id="veterinary" data-role="listview" style="display:none;"></ul>
+    <ul id="water-park" data-role="listview" style="display:none;"></ul>
+    <ul id="water-refilling-station" data-role="listview" style="display:none;"></ul>
+    <ul id="wines-and-spirits" data-role="listview" style="display:none;"></ul>
+
+  	<!--<a href="#" onClick="onclick_a();">show local storage</a>
+        <div id="deviceready" class="blink">
+          <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+                <p class="event online">Device is Online</p> 
+            </div> -->
+   
+
+        
+    </div><!-- /main content -->    
+	</div><!-- /page -->
+
+   <p id="updated" style="display:none"></p>
+                
+    
+        <script type="text/javascript" src="cordova.js"></script>
+       <!-- <script type="text/javascript" src="js/index.js"></script> -->
+		<script type="text/javascript">
+		if (window.localStorage.getItem('updated') === null) {
+			window.localStorage.setItem("updated", 0);
+			};
+		
+		var isOffline = 'onLine' in navigator && !navigator.onLine;
+		
+		if ( isOffline ) {
+   			 //local db
+		}
+		else {
+  		  // internet data
+	  //  navigator.notification.activityStart("Please Wait", "Downloading data ....");
+			$("#updated").load('http://apps.mylokal.ph/toapp/updated.txt');
+			var strupdated = 	$('#updated').html();
+		  var strcom = localStorage.getItem('updated');
+           if (strupdated != strcom) {
+			window.location.href = "loading.html";
+           }else{
+             //alert('already updated and online!');
+            };
+
+
+
+		 }
+		</script>
+     <!--      <script type="text/javascript">
+            app.initialize();
+        </script> -->
+    </body>
+</html>

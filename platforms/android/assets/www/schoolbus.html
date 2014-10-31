@@ -1,0 +1,206 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>Mylokal.ph | School Bus</title> 
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png"/>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="shortcut icon" href="http://demos.jquerymobile.com/1.4.2/favicon.ico">
+   <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700"> -->
+	<link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile-1.4.2.min.css">
+	<link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css">
+	<script src="assets/jqm/js/jquery.js"></script>
+	<script src="assets/jqm/_assets/js/index.js"></script>
+	<script src="assets/jqm/js/jquery.mobile-1.4.2.min.js"></script>
+    <!-- scripts -->
+	<script type="text/javascript" src="js/mylokaljson.js"></script>
+	<script type="text/javascript" src="js/jquery.mylokaljson.js"></script>
+   <!-- <script src="cordova.js"></script>-->
+	<!--<script src="http://maps.google.com/maps/api/js?sensor=true"></script>-->
+     
+     <script>
+	 	$(document).ready(function(){
+
+		//$('#runAttrTest').click(function() {
+
+			//status( false, $('#attrTest .status'));
+
+			$('#attrTest ul').html('');
+			$('#attrTest ul').json2html(schoolbus, transform);
+
+			//Validate the test
+			//status( $('#attrTest ul li:first').attr('class') === 'liststyle' &&
+			//	$('#attrTest ul li:first').attr('data-idx') === '42' &&
+			//	$('#attrTest ul li span:first').attr('class') === 'spanstyle', 
+				//$('#attrTest .status'));
+		});
+	//});
+
+
+
+	</script>
+    <script src="js/mylokalmap.js"></script>
+     
+</head> 
+
+<body>
+
+<div data-role="page">
+    
+   <!-- header -->
+     <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="b" style="background: -webkit-gradient(linear, center top, center bottom, from(#738aba), to(#2c4987));
+background: -webkit-linear-gradient(#738aba, #2c4987);
+border-bottom: 1px solid #111a33;
+-webkit-box-shadow: inset 0 1px 1px -1px #fff;
+-webkit-box-sizing: border-box;" data-position="fixed">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;" alt="Mylokal.ph"></h1>
+         <a href="#nav-panel" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);" data-role="button" role="button">menu</a>
+         <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);">back</a> 
+    </div>
+    
+  <div data-role="panel" data-display="push" data-theme="a" id="nav-panel">
+        <ul data-role="listview">
+            	<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li><a href="generalservices.html" data-rel="external" data-ajax="false" class="ui-no-icon ui-btn panelimg"><img src="assets/images/generalservices.png" alt="General Services" class="ui-li-icon ui-corner-none">General Services</a></li>
+    
+				<li><a href="localindustries.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/localindustries.png" alt="Local Industries" class="ui-li-icon ui-corner-none">Local Industries</a></li>
+
+				<li><a href="food-drinks.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/foodanddrinks.png" alt="Food" class="ui-li-icon ui-corner-none">Food and Drinks</a></li>
+	
+    			<li><a href="lodging.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/lodging.png" alt="lodging" class="ui-li-icon ui-corner-none">Lodging</a></li>
+	
+    			<li><a href="govt-services.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/govservices.png" alt="govt" class="ui-li-icon ui-corner-none">Government Services</a></li>
+	
+			    <li><a href="tourist-spot.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/touristspots.png" alt="tourist" class="ui-li-icon ui-corner-none">Tourism</a></li>
+	
+    			<li><a href="shops.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/shops.png" alt="shops" class="ui-li-icon ui-corner-none">Shops</a></li>
+	
+    			<li><a href="transportation.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/transportation.png" alt="transportation" class="ui-li-icon ui-corner-none">Transportation</a></li>
+
+				<li><a href="health-wellness.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/healthandwellness.png" alt="healthandwellness" class="ui-li-icon ui-corner-none">Health and Wellness</a></li>
+	
+    			<li><a href="peso.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/peso.png" alt="peso" class="ui-li-icon ui-corner-none">Peso</a></li>
+
+				<li><a href="sports-recreation.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/sportsandrecreation.png" alt="sportsandrecreation" class="ui-li-icon ui-corner-none">Sports and Recreation</a></li>
+
+				<li><a href="rentals.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/rentals.png" alt="rentals" class="ui-li-icon ui-corner-none">Sale and Rentals</a></li>
+	
+    			<li><a href="jobs.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/jobs.png" alt="jobs" class="ui-li-icon ui-corner-none">Jobs</a></li>
+	
+    			<li><a href="learning-center.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/learningcenters.png" alt="learningcenters" class="ui-li-icon ui-corner-none">Learning Centers</a></li>     
+
+			    <li><a href="deals.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/deals.png" alt="deals" class="ui-li-icon ui-corner-none">Deals</a></li>     
+
+			    <li><a href="#" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/deals.png" alt="contact-us" class="ui-li-icon ui-corner-none">Contact Us</a></li>     
+        
+         <li data-inset="false" data-icon="false" data-iconpos="right" style="padding: 0;" class="ui-li-has-icon ui-last-child"><a href="http://mylokal.ph/about" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/info-icon.png" alt="aboutus" class="ui-li-icon ui-corner-none">About Us</a></li> 
+            
+        </ul>
+                
+     </div><!-- /panel -->
+
+    
+<div data-role="content">
+<div data-role="tabs" id="tabs">
+
+  <div data-role="navbar">
+    <ul>
+      <li>
+      	<a href="#one" data-ajax="false" data-transition="slide">Premium</a></li>
+     <li><a href="#two" data-ajax="false" class="show-near" data-transition="slide">Nearby</a></li>
+      <li><a href="#" data-ajax="false" onClick="getlocation_onclick();">Register</a></li>
+    </ul>
+  </div>
+  
+  <div class="geo" data-inset="true" data-role="content">
+
+</div>
+  <div id="one" class="ui-body-d ui-content">
+
+  
+  
+  </div>
+  <div id="two">
+  
+    <div id="attrTest" style="padding: 0 0px; margin: 0 -5px;" data-role="content">
+    
+
+    
+ <ul  data-filter-placeholder="Find by name.." data-role="listview" data-filter="true" data-inset="true" id="listviewdata" class="list-original ui-listview ui-listview-inset ui-corner-all ui-nodisc-icon ui-shadow" style="/*margin:10px 2px 10px 2px;*/">
+ 
+ 
+</ul> 
+ <!--beta json by czerny -->
+ 
+ <script type="text/javascript" src="js/schoolbusjson.js"></script>
+
+ 
+       
+
+ 
+
+	</div><!-- /content -->  
+   <!-- <ul data-role="listview" data-inset="true">
+        <li><a href="#">Acura</a></li>
+        <li><a href="#">Audi</a></li>
+        <li><a href="#">BMW</a></li>
+        <li><a href="#">Cadillac</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul> -->
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+ <!--<div data-role="page" id="map-page">
+	
+	<div role="main" class="ui-content" id="map-canvas">
+		
+	</div>
+</div>-->
+
+
+
+
+</div><!-- /page -->
+
+      
+      
+      <script>
+function gotoAddress(){
+	var latstr = $(document.getElementById('data-lat').value)
+		lngtstr = $(document.getElementById('data-lng').value)
+		listlatlng = $(document.getElementById('data-lat').value +',' + document.getElementById('data-lng').value);
+	
+	var strpost = $('mylokalname=' + listlatlng);
+		//var mylokallatlng = $_POST[mylokalname];
+
+//$(formlat).val(latstr);
+//$(formlng).val(lngstr)
+$(formlat).attr('value', latstr);
+$(formlng).attr('value', lngstr);
+document.getElementById("callbussprofile").submit();
+//var $mylokallatlng = $_GET[mylokalname]
+
+alert(listlatlng);
+
+};
+		
+
+	 </script>
+      
+<form id="callbussprofile" action="bussinessprof.html" method="post" target="_blank" style="display:none;">
+	lat <input type="text" name="formlat" ><br>
+  	lng <input type="text" name="formlng"><br>
+  	<input type="submit" value="Submit">
+</form>
+</body>
+</html>

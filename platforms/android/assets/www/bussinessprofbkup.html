@@ -1,0 +1,380 @@
+<!DOCTYPE html> 
+<html  manifest="appcache.manifest"> 
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>Mylokal.ph</title> 
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png"/>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700"> -->
+	<link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile-1.4.2.min.css">
+	<link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css">
+    <script src="assets/jqm/js/jquery.js"></script>
+	<script src="assets/jqm/_assets/js/index.js"></script>
+	<script src="assets/jqm/js/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/mylokaljson.js"></script>
+	<script type="text/javascript" src="js/jquery.mylokaljson.js"></script>
+       <script src="js/cordova.js"></script>
+<!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"></script> -->
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <style>
+  #map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }
+  </style>
+  <!--<script src="js/mylokalmap.js"></script> -->
+
+    
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+	
+	var resizeText = function () {
+		// Standard height, for which the body font size is correct
+		var preferredFontSize = 400; // %
+		var preferredSize = 1024 * 768;
+        var preferredFontSize2 = 200;
+        var preferredFontSize3 = 150;
+        var preferredSize2 = 1024 * 768;
+        var preferredSize3 = 1024 * 768;
+        
+        
+		var currentSize = $(window).width() * $(window).height();
+		var scalePercentage = Math.sqrt(currentSize) / Math.sqrt(preferredSize);
+        var scalePercentage2 = Math.sqrt(currentSize) / Math.sqrt(preferredSize2);
+        var scalePercentage3 = Math.sqrt(currentSize) / Math.sqrt(preferredSize3);
+		var newFontSize = preferredFontSize * scalePercentage;
+        var newFontSize2 = preferredFontSize2 * scalePercentage2;
+        var newFontSize3 = preferredFontSize3 * scalePercentage3;
+		$('.busstitle').css("font-size", newFontSize + '%');
+        $('.bussadd').css('font-size', newFontSize2 + '%');
+        $('.strfooter').css('font-size', newFontSize3 + '%');
+	};
+
+	$(window).bind('resize', function() {
+		resizeText();
+	}).trigger('resize');
+
+});	
+    
+function getTokens(){
+    var tokens = [];            // new array to hold result
+    var query = location.search; // everything from the '?' onward 
+    query = query.slice(1);     // remove the first character, which will be the '?' 
+    query = query.split('&');   // split via each '&', leaving us an array of something=something strings
+
+    // iterate through each something=something string
+    $.each(query, function(i,value){    
+
+        // split the something=something string via '=', creating an array containing the token name and data
+        var token = value.split('=');   
+
+        // assign the first array element (the token name) to the 'key' variable
+        var key = decodeURIComponent(token[0]);     
+
+        // assign the second array element (the token data) to the 'data' variable
+        var data = decodeURIComponent(token[1]);
+
+        tokens[key] = data;     // add an associative key/data pair to our result array, with key names being the URI token names
+    });
+
+    return tokens;  // return the array
+	
+}
+    function gomapclick(){
+   
+    var tokens = getTokens(),$latlng = tokens['mylokal'];document.write('geo:' + $latlng);
+    }
+
+    
+
+
+
+    function onbuttonclick(){
+
+var tokens = getTokens(),
+	logo = tokens['logo'],
+	$phone = tokens['phone'],
+	$url = tokens['url'],
+	$email = tokens['email'],
+	//$add =tokens['add'];
+	$fb =tokens['facebook'],
+//alert($fb);
+        $latlng = tokens['mylokal'],
+    $href  = 'https://maps.googleapis.com/maps/api/staticmap?center='+$latlng+ '&zoom=10&size=200x200&markers=icon:red%7Clabel:%7C'+$latlng,
+
+	$title = decodeURI(tokens['title']);
+    
+	
+ // $("")
+//        .show()
+//        .html("<img id='bussimg' class='busslogo' src='assets/images/logo/" + logo + "' //width='100px' height='100'><h4 style='margin-left: 8em;margin-top: -30px; text-shadow: none;'>" //+ $title + "</h4>"); 
+	$(".busstitle")
+  	    .show()
+        .html(decodeURIComponent($title));
+     //alert($title)
+
+  $(".bussphone")
+  	    .show()
+        .html("<a href='tel:" + $phone + "'>Call Us Now!</a>");
+  $(".bussurl")
+      .show()
+        .html("<a href='"+ $url +"'>Visit Our Website</a>");
+  $(".bussemail")
+      .show()
+        .html("<a href='mailto:" + $email + "'>Email Us!</a>");
+  //$(".bussadd")
+   //   .show()
+    //    .html("<p>" + $add + "</p>");	
+	 $(".bussfb")
+      .show()
+        .html("<a href='fb://publish/" + $fb + "'>Like Us On Facebook!</a>");
+     $(".mapview")
+     .show()
+     .html("<a data-ajax='false' class='show-near' data-transition='slide' href='" + $href + "'>View Map</a>");
+ 
+};
+
+
+   
+//document.write( tokens['title'] );
+
+window.onload = onbuttonclick;
+//google.maps.event.addDomListener(window, 'load', onbuttonclick);
+onbuttonclick();
+
+
+    
+
+    
+
+            var map,
+                currentPosition,
+                directionsDisplay, 
+                directionsService,
+                destinationLatitude = 13.6082,
+                destinationLongitude = 123.0691;
+
+            function initializeMapAndCalculateRoute(lat, lon)
+            {
+                directionsDisplay = new google.maps.DirectionsRenderer(); 
+                directionsService = new google.maps.DirectionsService();
+
+                currentPosition = new google.maps.LatLng(lat, lon);
+
+                map = new google.maps.Map(document.getElementById('map_canvas'), {
+                   zoom: 15,
+                   center: currentPosition,
+                   mapTypeId: google.maps.MapTypeId.ROADMAP
+                 });
+
+                directionsDisplay.setMap(map);
+
+                 var currentPositionMarker = new google.maps.Marker({
+                    position: currentPosition,
+                    map: map,
+                    title: "Current position"
+                });
+
+                // current position marker info
+                /*
+                var infowindow = new google.maps.InfoWindow();
+                google.maps.event.addListener(currentPositionMarker, 'click', function() {
+                    infowindow.setContent("Current position: latitude: " + lat +" longitude: " + lon);
+                    infowindow.open(map, currentPositionMarker);
+                });
+                */
+
+                // calculate Route
+                calculateRoute();
+            }
+
+            function locError(error) {
+               // the current position could not be located
+            }
+
+            function locSuccess(position) {
+                // initialize map with current position and calculate the route
+                initializeMapAndCalculateRoute(position.coords.latitude, position.coords.longitude);
+            }
+
+            function calculateRoute() {
+
+                var targetDestination =  new google.maps.LatLng( destinationLatitude,destinationLongitude );
+                if (currentPosition != '' && targetDestination != '') {
+
+                    var request = {
+                        origin: currentPosition, 
+                        destination: targetDestination,
+                        travelMode: google.maps.DirectionsTravelMode["DRIVING"]
+                    };
+
+                    directionsService.route(request, function(response, status) {
+                        if (status == google.maps.DirectionsStatus.OK) {
+                            directionsDisplay.setPanel(document.getElementById("directions"));
+                            directionsDisplay.setDirections(response); 
+
+                            /*
+                                var myRoute = response.routes[0].legs[0];
+                                for (var i = 0; i < myRoute.steps.length; i++) {
+                                    alert(myRoute.steps[i].instructions);
+                                }
+                            */
+                            $("#results").show();
+                        }
+                        else {
+                            $("#results").hide();
+                        }
+                    });
+                }
+                else {
+                    $("#results").hide();
+                }
+            }
+
+            $(document).live("pagebeforeshow", "#map_page", function() {
+                // find current position and on success initialize map and calculate the route
+                navigator.geolocation.getCurrentPosition(locSuccess, locError);
+            });
+
+        </script>
+    
+    
+     
+</head> 
+
+<body>
+ 
+
+<div data-role="page" id="map-page">
+    
+  <!-- header -->
+  <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="d" data-position="fixed">
+	<h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;" alt="Mylokal.ph"></h1>
+	<a href="#nav-panel" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" data-role="button" role="button">menu</a>
+	<a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text">back</a> 
+  </div>
+    
+<br>
+<!--<div data-role="content">-->
+<div data-role="tabs" id="tabs">
+	<div data-role="content">
+  	<div data-role="navbar" class="ui-content">
+    <ul>
+      <li><a href="#one" data-transition="slide" class="ui-btn-active">Info</a></li>
+     <li><a href="#two" data-transition="slide">Map</a></li>
+   <li><a href="#three" data-ajax="false">Share</a></li>
+
+      <!--fb://publish/?text=www.domain.com-->
+	  </ul>
+  	</div>
+  	</div>
+
+	
+  	<div id="one">
+			<h1 class="busstitle" style="text-align:center;"></h1>
+            <p class="bussadd" style="text-align:center;"><script>var tokens = getTokens();document.write( tokens['addr'] );</script></p>
+ <ul data-role="listview" data-inset="true" data-theme="a" class="ui-listview ui-listview-inset ui-corner-all ui-shadow businesslist ui-group-theme-a" style="margin-top: 10;">
+    	<p style="display:none;"><script>var tokens = getTokens();document.write( tokens['mylokal'] );</script></p>
+		<li><p style="color:#333;"><script>var tokens = getTokens();document.write( tokens['cat'] );</script></p></li>
+		<li class="bussphone"></li>    
+		<li class="bussurl"></li>
+		<li class="bussemail"></li>
+		<li class="bussfb"></li>
+   <!--<li class="mapview"></li> -->
+     
+ 
+	</ul>
+	
+	
+  
+  	</div>
+  	<div id="two">
+      
+      <div role="main" class="ui-content" id="map-canvas" style="width:100%; height:200px;">
+		<!-- map loads here... -->
+	</div> 
+           
+     <!--          <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:0em;">
+                    <div id="map_canvas" style="height:350px;"></div>
+                </div>
+                <div id="results" style="display:none;">
+                    <div id="directions"></div>
+                </div> -->
+           
+        
+	
+	</div>
+</div>
+ 
+   </div>
+   <div id="three">
+ 
+   </div>
+
+</div>
+
+	<!--</div><!--/content tabs -->
+
+
+  <div data-role="footer" data-theme="d"  style="height:30px;" data-position="fixed">
+	<h1 class="ui-title strfooter" style="line-height: 2.4;font-weight: bold;font-size: smaller;text-shadow: none;">© 2013 Mylokal.ph - Powered by Mobile Lab Inc</h1>
+  </div>
+
+
+     
+ 
+
+</div>
+
+	<script>
+	/*
+	 * Google Maps documentation: http://code.google.com/apis/maps/documentation/javascript/basics.html
+	 * Geolocation documentation: http://dev.w3.org/geo/api/spec-source.html
+	 */
+	 var tokens = getTokens(),
+     $latlng = tokens['mylokal']
+
+	$( document ).on( "pagecreate", "#map-page", function() {
+		var defaultLatLng = new google.maps.LatLng($latlng);  
+
+		if ( navigator.geolocation ) {
+			function success(pos) {
+				// Location found, show map with these coordinates
+				//drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+				drawMap(defaultLatLng);
+			}
+
+			function fail(error) {
+				drawMap(defaultLatLng);  // Failed to find location, show default map
+			}
+
+			// Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
+			navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
+		} else {
+			drawMap(defaultLatLng);  // No geolocation support, show default map
+		}
+
+		function drawMap(latlng) {
+			var myOptions = {
+				zoom: 10,
+				center: latlng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+
+			var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+
+			// Add an overlay to the map of current lat/lng
+			var marker = new google.maps.Marker({
+				position: latlng,
+				map: map,
+				icon: "img/pin.png",
+				title: "Greetings!"
+			});
+		}
+
+	});
+	</script>
+
+    </body>
+    </html>

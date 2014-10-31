@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Mylokal.ph | Sports & Recreation</title> 
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png"/>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700"> -->
+    <link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile-1.4.2.min.css">
+    <link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css">
+    <script src="assets/jqm/js/jquery.js"></script>
+    <script src="assets/jqm/_assets/js/index.js"></script>
+    <script src="assets/jqm/js/jquery.mobile-1.4.2.min.js"></script>
+    <!-- scripts -->
+    <script type="text/javascript" src="js/mylokaljson.js"></script>
+    <script type="text/javascript" src="js/jquery.mylokaljson.js"></script>
+  
+  
+   <!-- <link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile.css">
+    <link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css"> -->
+    <!-- scripts -->
+
+    
+    <!--<script src="assets/jqm/external/jquery/jquery.js"></script>
+    <script src="assets/jqm/_assets/js/"></script>
+    <script src="assets/jqm/js/"></script>-->
+
+
+   
+</head> 
+
+<body>
+
+<div data-role="page">
+    
+   <!-- header -->
+    <!-- <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="b" style="background: -webkit-gradient(linear, center top, center bottom, from(#738aba), to(#2c4987));
+background: -webkit-linear-gradient(#738aba, #2c4987);
+border-bottom: 1px solid #111a33;
+-webkit-box-shadow: inset 0 1px 1px -1px #fff;
+-webkit-box-sizing: border-box;" data-position="fixed">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;"></h1>
+         <a href="index.html" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);" data-role="button" role="button">home</a>
+         <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);">back</a> 
+    </div> -->
+    <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="d" data-position="fixed">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;" alt="Mylokal.ph"></h1>
+        <a href="#nav-panel" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" data-role="button" role="button">menu</a>
+        <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text">back</a> 
+    </div>
+    
+    
+    <div data-role="content">
+    
+ <ul data-role="listview" data-inset="true" class="secondaryitemul ui-listview ui-listview-inset">
+    <li class="ui-li-has-thumb secondaryitemli secondaryitemlifirst">
+    <a href="arcade.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #7c4400; margin-bottom: 8px;">
+        <img src="assets/images/sr/sportsandrecreation.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Arcades & Games</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="arenagymnasium.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #23d000;">
+        <img src="assets/images/sr/gymnasium.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Arena & Gymnasium</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="casino.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #ffc600; margin-bottom: 8px;">
+        <img src="assets/images/sr/casino.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Casino</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="cinema.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #ffc600; margin-bottom: 8px;">
+         <img src="assets/images/sr/cinemas.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Cinema</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="mallshoppingcenter.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #00b218; margin-bottom: 8px;">
+        <img src="assets/images/sr/shoppingcenter.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Mall - Shopping Center</h2></a>
+    </li>	
+    <li class="ui-li-has-thumb secondaryitemli"><a href="musicandinstrumentshops.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #7c4400; margin-bottom: 8px;">
+         <img src="assets/images/sr/sportsandrecreation.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Music & Dance</h2></a>
+    </li>
+        <li class="ui-li-has-thumb secondaryitemli"><a href="parksandwildlife.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #3fa9f5; margin-bottom: 8px;">
+        <img src="assets/images/sr/park.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Parks & Wildlife</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="sportsandhobbyshop.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #ffc600; margin-bottom: 8px;">
+        <img src="assets/images/sr/sports.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Sports & Hobby Shop</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="themepark.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #7c4400; margin-bottom: 8px;">
+        <img src="assets/images/sr/sportsandrecreation.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Theme Park</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="waterpark.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #7c4400; margin-bottom: 8px;">
+        <img src="assets/images/sr/sportsandrecreation.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Water Park</h2></a>
+    </li>
+	</ul>
+
+    </div><!-- /content -->
+
+        <!-- footer -->
+     <div class="ui-footer ui-bar-a" data-role="footer" data-theme="a">
+        <h1 class="ui-title">© 2013 Mylokal.ph - Powered by Mobile Lab Inc</h1>
+<!--<a href="http://mylokal.ph/aboutus" data-theme="b" data-icon="info" data-iconpos="left" data-shadow="false" data-iconshadow="false" data-ajax="false" rel="external" class="ui-link ui-btn-left ui-btn ui-icon-infotab ui-corner-all" data-role="button">About Us</a> -->
+    </div><!-- /footer -->
+
+
+    
+</div><!-- /page -->
+
+
+</body>
+</html>

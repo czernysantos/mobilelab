@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+	    <link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile-1.4.2.min.css">
+		<link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css">
+        
+        <title>MYLOKAL.PH</title>
+   		<script src="assets/jqm/js/jquery.js"></script>
+		<script src="assets/jqm/js/jquery.mobile-1.4.2.min.js"></script>
+	    <script src="xdomain.js"
+          slave="http://apps.mylokal.ph/toapp/index.html"></script>
+		<script>
+		function onclick_a(){
+		alert(window.localStorage.getItem('advertising'));
+		//window.localStorage.setItem('advertising', ('http://apps.mylokal.ph/toapp/advertising.txt').html());
+		}
+        </script>
+        
+<style>
+    .activityIndicator {
+	
+	height: 100px;
+	width: 100px;
+	-webkit-background-size: 100px 100px;
+	margin: auto;
+	background-image: url("assets/images/mylokal.gif");
+    background-repeat: no-repeat;
+}
+
+    </style>
+    </head>
+    <body>
+    <div data-role="page" id="home"><!-- page -->
+ <!-- header -->
+    <div class="ui-header ui-bar-d" role="banner" data-role="header" data-theme="d" data-position="fixed">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;" alt="logo"></h1>
+      <!--   <a href="index.html" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);" data-role="button" role="button">home</a>
+         <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);">back</a> -->
+    </div>
+    <br>
+    <br>
+    	<div class="activityIndicator ui-content"></div>
+    <div data-role="content" class="ui-content" style="text-align: center;">
+        <h4 style="margin:auto;">Receiving updates please wait... </h4></div>
+    <!-- slider -->
+    <ul id="advertising" data-role="listview" style="display:none;"></ul>
+    <ul id="agri-business" data-role="listview" style="display:none;"></ul>
+    <ul id="airport" data-role="listview" style="display:none;"></ul>
+    <ul id="apartment" data-role="listview" style="display:none;"></ul>
+    <ul id="appliance-electronics" data-role="listview" style="display:none;"></ul>
+    <ul id="arcade-game" data-role="listview" style="display:none;"></ul>
+    <ul id="arena-gymnasium" data-role="listview" style="display:none;"></ul>
+    <ul id="auto-mobile-dealer" data-role="listview" style="display:none;"></ul>
+    <ul id="auto-parts-and-services" data-role="listview" style="display:none;"></ul>
+    <ul id="bank" data-role="listview" style="display:none;"></ul>
+    <ul id="barangay-hall" data-role="listview" style="display:none;"></ul>
+    <ul id="barber-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="beach-resort" data-role="listview" style="display:none;"></ul>
+    <ul id="beauty-products" data-role="listview" style="display:none;"></ul>
+    <ul id="beauty-salo" data-role="listview" style="display:none;"></ul>
+    <ul id="bed-and-breakfast" data-role="listview" style="display:none;"></ul>
+    <ul id="booking-office" data-role="listview" style="display:none;"></ul>
+    <ul id="bookstore-and-copier" data-role="listview" style="display:none;"></ul>
+    <ul id="boutique-garments" data-role="listview" style="display:none;"></ul>
+    <ul id="bread-and-coffee" data-role="listview" style="display:none;"></ul>
+    <ul id="builders-and-construction" data-role="listview" style="display:none;"></ul>
+    <ul id="bus-terminal" data-role="listview" style="display:none;"></ul>
+    <ul id="canteen-eatery" data-role="listview" style="display:none;"></ul>
+    <ul id="capitol-and-municipalhall" data-role="listview" style="display:none;"></ul>
+    <ul id="casino" data-role="listview" style="display:none;"></ul>
+    <ul id="catering-services" data-role="listview" style="display:none;"></ul>
+    <ul id="church" data-role="listview" style="display:none;"></ul>
+    <ul id="cinema" data-role="listview" style="display:none;"></ul>
+    <ul id="cleaning-and-sanitation" data-role="listview" style="display:none;"></ul>
+    <ul id="clinic" data-role="listview" style="display:none;"></ul>
+    <ul id="college-university" data-role="listview" style="display:none;"></ul>
+    <ul id="computer-services" data-role="listview" style="display:none;"></ul>
+    <ul id="condo-units" data-role="listview" style="display:none;"></ul>
+    <ul id="convenience-store" data-role="listview" style="display:none;"></ul>
+    <ul id="courier" data-role="listview" style="display:none;"></ul>
+    <ul id="daycare" data-role="listview" style="display:none;"></ul>
+    <ul id="dental" data-role="listview" style="display:none;"></ul>
+    <ul id="derma-facial-center" data-role="listview" style="display:none;"></ul>
+    <ul id="distributor" data-role="listview" style="display:none;"></ul>
+    <ul id="dorm-and-bedspace" data-role="listview" style="display:none;"></ul>
+    <ul id="driving-school" data-role="listview" style="display:none;"></ul>
+    <ul id="drugstore-medical" data-role="listview" style="display:none;"></ul>
+    <ul id="drug-testing" data-role="listview" style="display:none;"></ul>
+    <ul id="eco-adventure" data-role="listview" style="display:none;"></ul>
+    <ul id="EENT-clinic" data-role="listview" style="display:none;"></ul>
+    <ul id="event-services" data-role="listview" style="display:none;"></ul>
+    <ul id="fastfood" data-role="listview" style="display:none;"></ul>
+    <ul id="fire-and-rescue" data-role="listview" style="display:none;"></ul>
+    <ul id="flower-garden" data-role="listview" style="display:none;"></ul>
+    <ul id="foodcart" data-role="listview" style="display:none;"></ul>
+    <ul id="food-products" data-role="listview" style="display:none;"></ul>
+    <ul id="funeral-and-memorial" data-role="listview" style="display:none;"></ul>
+    <ul id="furnitures-decors" data-role="listview" style="display:none;"></ul>
+    <ul id="gadget-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="gasoline-station" data-role="listview" style="display:none;"></ul>
+    <ul id="general-merchandise" data-role="listview" style="display:none;"></ul>
+    <ul id="general-repair" data-role="listview" style="display:none;"></ul>
+    <ul id="grocery-and-supermarket" data-role="listview" style="display:none;"></ul>
+    <ul id="gym" data-role="listview" style="display:none;"></ul>
+    <ul id="handicrafts" data-role="listview" style="display:none;"></ul>
+    <ul id="hardware" data-role="listview" style="display:none;"></ul>
+    <ul id="hospital" data-role="listview" style="display:none;"></ul>
+    <ul id="hotel" data-role="listview" style="display:none;"></ul>
+    <ul id="insurance" data-role="listview" style="display:none;"></ul>
+    <ul id="internet-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="IT-BPO" data-role="listview" style="display:none;"></ul>
+    <ul id="jeepney-terminal" data-role="listview" style="display:none;"></ul>
+    <ul id="jewelry-accessories" data-role="listview" style="display:none;"></ul>
+    <ul id="junk-scrap-metal" data-role="listview" style="display:none;"></ul>
+    <ul id="laundry-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="law-office" data-role="listview" style="display:none;"></ul>
+    <ul id="lending-finance" data-role="listview" style="display:none;"></ul>
+    <ul id="lotto-outlet" data-role="listview" style="display:none;"></ul>
+    <ul id="lpg-station" data-role="listview" style="display:none;"></ul>
+    <ul id="lto-ltfrb" data-role="listview" style="display:none;"></ul>
+    <ul id="machine-welding" data-role="listview" style="display:none;"></ul>
+    <ul id="mall-shopping-center" data-role="listview" style="display:none;"></ul>
+    <ul id="manpower-services" data-role="listview" style="display:none;"></ul>
+    <ul id="manufacturer" data-role="listview" style="display:none;"></ul>
+    <ul id="meat-fish-produce" data-role="listview" style="display:none;"></ul>
+    <ul id="moneygram-remittance" data-role="listview" style="display:none;"></ul>
+    <ul id="mosques" data-role="listview" style="display:none;"></ul>
+    <ul id="motor-cycle-dealer" data-role="listview" style="display:none;"></ul>
+    <ul id="music-dance" data-role="listview" style="display:none;"></ul>
+    <ul id="music-instrument-shops" data-role="listview" style="display:none;"></ul>
+    <ul id="newspaper-and-magazine" data-role="listview" style="display:none;"></ul>
+    <ul id="ngo" data-role="listview" style="display:none;"></ul>
+    <ul id="notary-public" data-role="listview" style="display:none;"></ul>
+    <ul id="novelty-store" data-role="listview" style="display:none;"></ul>
+    <ul id="OB-GYNE" data-role="listview" style="display:none;"></ul>
+    <ul id="online-sellers" data-role="listview" style="display:none;"></ul>
+    <ul id="pasalubong-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="pawnshop" data-role="listview" style="display:none;"></ul>
+    <ul id="pediatrics" data-role="listview" style="display:none;"></ul>
+    <ul id="pet-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="pharmaceutical" data-role="listview" style="display:none;"></ul>
+    <ul id="police-station" data-role="listview" style="display:none;"></ul>
+    <ul id="post-office" data-role="listview" style="display:none;"></ul>
+    <ul id="radio-station" data-role="listview" style="display:none;"></ul>
+    <ul id="regional-govt-center" data-role="listview" style="display:none;"></ul>
+    <ul id="religious-store" data-role="listview" style="display:none;"></ul>
+    <ul id="repair-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="restaurant-and-bar" data-role="listview" style="display:none;"></ul>
+    <ul id="review-tutorial-center" data-role="listview" style="display:none;"></ul>
+    <ul id="room" data-role="listview" style="display:none;"></ul>
+    <ul id="school-bus" data-role="listview" style="display:none;"></ul>
+    <ul id="schools" data-role="listview" style="display:none;"></ul>
+    <ul id="seaport" data-role="listview" style="display:none;"></ul>
+    <ul id="spa" data-role="listview" style="display:none;"></ul>
+    <ul id="sports-hobby-shop" data-role="listview" style="display:none;"></ul>
+    <ul id="tailoring" data-role="listview" style="display:none;"></ul>
+    <ul id="tattoo-piercing" data-role="listview" style="display:none;"></ul>
+    <ul id="taxi-terminal" data-role="listview" style="display:none;"></ul>
+    <ul id="telecommunication" data-role="listview" style="display:none;"></ul>
+    <ul id="theme-park" data-role="listview" style="display:none;"></ul>
+    <ul id="tourist-spot" data-role="listview" style="display:none;"></ul>
+    <ul id="townhouse" data-role="listview" style="display:none;"></ul>
+    <ul id="training-center" data-role="listview" style="display:none;"></ul>
+    <ul id="travel-agency" data-role="listview" style="display:none;"></ul>
+    <ul id="travel-inn" data-role="listview" style="display:none;"></ul>
+    <ul id="tv-station" data-role="listview" style="display:none;"></ul>
+    <ul id="van-terminal" data-role="listview" style="display:none;"></ul>
+    <ul id="veterinary" data-role="listview" style="display:none;"></ul>
+    <ul id="water-park" data-role="listview" style="display:none;"></ul>
+    <ul id="water-refilling-station" data-role="listview" style="display:none;"></ul>
+    <ul id="wines-and-spirits" data-role="listview" style="display:none;"></ul>
+<p id="updated" style="display:none"></p>
+  	<!--<a href="#" onClick="onclick_a();">show local storage</a>
+        <div id="deviceready" class="blink">
+          <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+                <p class="event online">Device is Online</p> 
+            </div> -->
+   
+   
+
+        
+    </div><!-- /main content -->    
+	</div><!-- /page -->
+    
+        <script type="text/javascript" src="cordova.js"></script>
+       <!-- <script type="text/javascript" src="js/index.js"></script> -->
+		<script type="text/javascript">
+		var isOffline = 'onLine' in navigator && !navigator.onLine;
+
+		if ( isOffline ) {
+   			 //local db
+			// window.location.href = "index.html";
+		}
+		else {
+  		  // internet data
+	  //   navigator.notification.activityStart("Please Wait", "Downloading data ....");
+		 //  var strcom = 'updated';
+
+          // if (strcom in localStorage) {
+	
+		  setTimeout(function () {
+	$("#advertising").load('http://apps.mylokal.ph/toapp/advertising.txt');
+	$("#agri-business").load('http://apps.mylokal.ph/toapp/agri-business.txt');
+	$("#airport").load('http://apps.mylokal.ph/toapp/airport.txt');
+	$("#apartment").load('http://apps.mylokal.ph/toapp/apartment.txt');
+	$("#appliance-electronics").load('http://apps.mylokal.ph/toapp/appliance-electronics.txt');
+	$("#arcade-game").load('http://apps.mylokal.ph/toapp/arcade-game.txt');
+	$("#arena-gymnasium").load('http://apps.mylokal.ph/toapp/arena-gymnasium.txt');
+	$("#auto-mobile-dealer").load('http://apps.mylokal.ph/toapp/auto-mobile-dealer.txt');
+	$("#auto-parts-and-services").load('http://apps.mylokal.ph/toapp/auto-parts-and-services.txt');
+	$("#bank").load('http://apps.mylokal.ph/toapp/bank.txt');
+	$("#barangay-hall").load('http://apps.mylokal.ph/toapp/barangay-hall.txt');
+	$("#barber-shop").load('http://apps.mylokal.ph/toapp/barber-shop.txt');
+	$("#beach-resort").load('http://apps.mylokal.ph/toapp/beach-resort.txt');
+	$("#beauty-products").load('http://apps.mylokal.ph/toapp/beauty-products.txt');
+	$("#beauty-salo").load('http://apps.mylokal.ph/toapp/beauty-salo.txt');
+	$("#bed-and-breakfast").load('http://apps.mylokal.ph/toapp/bed-and-breakfast.txt');
+	$("#booking-office").load('http://apps.mylokal.ph/toapp/booking-office.txt');
+	$("#bookstore-and-copier").load('http://apps.mylokal.ph/toapp/bookstore-and-copier.txt');
+	$("#boutique-garments").load('http://apps.mylokal.ph/toapp/boutique-garments.txt');
+	$("#bread-and-coffee").load('http://apps.mylokal.ph/toapp/bread-and-coffee.txt');
+	$("#builders-and-construction").load('http://apps.mylokal.ph/toapp/builders-and-construction.txt');
+	$("#bus-terminal").load('http://apps.mylokal.ph/toapp/bus-terminal.txt');
+	$("#canteen-eatery").load('http://apps.mylokal.ph/toapp/canteen-eatery.txt');
+	$("#capitol-and-municipalhall").load('http://apps.mylokal.ph/toapp/capitol-and-municipalhall.txt');
+	$("#casino").load('http://apps.mylokal.ph/toapp/casino.txt');
+	$("#catering-services").load('http://apps.mylokal.ph/toapp/catering-services.txt');
+	$("#church").load('http://apps.mylokal.ph/toapp/church.txt');
+	$("#cinema").load('http://apps.mylokal.ph/toapp/cinema.txt');
+	$("#cleaning-and-sanitation").load('http://apps.mylokal.ph/toapp/cleaning-and-sanitation.txt');
+	$("#clinic").load('http://apps.mylokal.ph/toapp/clinic.txt');
+	$("#college-university").load('http://apps.mylokal.ph/toapp/college-university.txt');
+	$("#computer-services").load('http://apps.mylokal.ph/toapp/computer-services.txt');
+	$("#condo-units").load('http://apps.mylokal.ph/toapp/condo-units.txt');
+	$("#convenience-store").load('http://apps.mylokal.ph/toapp/convenience-store.txt');
+	$("#courier").load('http://apps.mylokal.ph/toapp/courier.txt');
+	$("#daycare").load('http://apps.mylokal.ph/toapp/daycare.txt');
+	$("#dental").load('http://apps.mylokal.ph/toapp/dental.txt');
+	$("#derma-facial-center").load('http://apps.mylokal.ph/toapp/derma-facial-center.txt');
+	$("#distributor").load('http://apps.mylokal.ph/toapp/distributor.txt');
+	$("#dorm-and-bedspace").load('http://apps.mylokal.ph/toapp/dorm-and-bedspace.txt');
+	$("#driving-school").load('http://apps.mylokal.ph/toapp/driving-school.txt');
+	$("#drugstore-medical").load('http://apps.mylokal.ph/toapp/drugstore-medical.txt');
+	$("#drug-testing").load('http://apps.mylokal.ph/toapp/drug-testing.txt');
+	$("#eco-adventure").load('http://apps.mylokal.ph/toapp/eco-adventure.txt');
+	$("#EENT-clinic").load('http://apps.mylokal.ph/toapp/EENT-clinic.txt');
+	$("#event-services").load('http://apps.mylokal.ph/toapp/event-services.txt');
+	$("#fastfood").load('http://apps.mylokal.ph/toapp/fastfood.txt');
+	$("#fire-and-rescue").load('http://apps.mylokal.ph/toapp/fire-and-rescue.txt');
+	$("#flower-garden").load('http://apps.mylokal.ph/toapp/flower-garden.txt');
+	$("#foodcart").load('http://apps.mylokal.ph/toapp/foodcart.txt');
+	$("#food-products").load('http://apps.mylokal.ph/toapp/food-products.txt');
+	$("#funeral-and-memorial").load('http://apps.mylokal.ph/toapp/funeral-and-memorial.txt');
+	$("#furnitures-decors").load('http://apps.mylokal.ph/toapp/furnitures-decors.txt');
+	$("#gadget-shop").load('http://apps.mylokal.ph/toapp/gadget-shop.txt');
+	$("#gasoline-station").load('http://apps.mylokal.ph/toapp/gasoline-station.txt');
+	$("#general-merchandise").load('http://apps.mylokal.ph/toapp/general-merchandise.txt');
+	$("#general-repair").load('http://apps.mylokal.ph/toapp/general-repair.txt');
+	$("#grocery-and-supermarket").load('http://apps.mylokal.ph/toapp/grocery-and-supermarket.txt');
+	$("#gym").load('http://apps.mylokal.ph/toapp/gym.txt');
+	$("#handicrafts").load('http://apps.mylokal.ph/toapp/handicrafts.txt');
+	$("#hardware").load('http://apps.mylokal.ph/toapp/hardware.txt');
+	$("#hospital").load('http://apps.mylokal.ph/toapp/hospital.txt');
+	$("#hotel").load('http://apps.mylokal.ph/toapp/hotel.txt');
+	$("#insurance").load('http://apps.mylokal.ph/toapp/insurance.txt');
+	$("#internet-shop").load('http://apps.mylokal.ph/toapp/internet-shop.txt');
+	$("#IT-BPO").load('http://apps.mylokal.ph/toapp/IT-BPO.txt');
+	$("#jeepney-terminal").load('http://apps.mylokal.ph/toapp/jeepney-terminal.txt');
+	$("#jewelry-accessories").load('http://apps.mylokal.ph/toapp/jewelry-accessories.txt');
+	$("#junk-scrap-metal").load('http://apps.mylokal.ph/toapp/junk-scrap-metal.txt');
+	$("#laundry-shop").load('http://apps.mylokal.ph/toapp/laundry-shop.txt');
+	$("#law-office").load('http://apps.mylokal.ph/toapp/law-office.txt');
+	$("#lending-finance").load('http://apps.mylokal.ph/toapp/lending-finance.txt');
+	$("#lotto-outlet").load('http://apps.mylokal.ph/toapp/lotto-outlet.txt');
+	$("#lpg-station").load('http://apps.mylokal.ph/toapp/lpg-station.txt');
+	$("#lto-ltfrb").load('http://apps.mylokal.ph/toapp/lto-ltfrb.txt');
+	$("#machine-welding").load('http://apps.mylokal.ph/toapp/machine-welding.txt');
+	$("#mall-shopping-center").load('http://apps.mylokal.ph/toapp/mall-shopping-center.txt');
+	$("#manpower-services").load('http://apps.mylokal.ph/toapp/manpower-services.txt');
+	$("#manufacturer").load('http://apps.mylokal.ph/toapp/manufacturer.txt');
+	$("#meat-fish-produce").load('http://apps.mylokal.ph/toapp/meat-fish-produce.txt');
+	$("#moneygram-remittance").load('http://apps.mylokal.ph/toapp/moneygram-remittance.txt');
+	$("#mosques").load('http://apps.mylokal.ph/toapp/mosques.txt');
+	$("#motor-cycle-dealer").load('http://apps.mylokal.ph/toapp/motor-cycle-dealer.txt');
+	$("#music-dance").load('http://apps.mylokal.ph/toapp/music-dance.txt');
+	$("#music-instrument-shops").load('http://apps.mylokal.ph/toapp/music-instrument-shops.txt');
+	$("#newspaper-and-magazine").load('http://apps.mylokal.ph/toapp/newspaper-and-magazine.txt');
+	$("#ngo").load('http://apps.mylokal.ph/toapp/ngo.txt');
+	$("#notary-public").load('http://apps.mylokal.ph/toapp/notary-public.txt');
+	$("#novelty-store").load('http://apps.mylokal.ph/toapp/novelty-store.txt');
+	$("#OB-GYNE").load('http://apps.mylokal.ph/toapp/OB-GYNE.txt');
+	$("#online-sellers").load('http://apps.mylokal.ph/toapp/online-sellers.txt');
+	$("#pasalubong-shop").load('http://apps.mylokal.ph/toapp/pasalubong-shop.txt');
+	$("#pawnshop").load('http://apps.mylokal.ph/toapp/pawnshop.txt');
+	$("#pediatrics").load('http://apps.mylokal.ph/toapp/pediatrics.txt');
+	$("#pet-shop").load('http://apps.mylokal.ph/toapp/pet-shop.txt');
+	$("#pharmaceutical").load('http://apps.mylokal.ph/toapp/pharmaceutical.txt');
+	$("#police-station").load('http://apps.mylokal.ph/toapp/police-station.txt');
+	$("#post-office").load('http://apps.mylokal.ph/toapp/post-office.txt');
+	$("#radio-station").load('http://apps.mylokal.ph/toapp/radio-station.txt');
+	$("#regional-govt-center").load('http://apps.mylokal.ph/toapp/regional-govt-center.txt');
+	$("#religious-store").load('http://apps.mylokal.ph/toapp/religious-store.txt');
+	$("#repair-shop").load('http://apps.mylokal.ph/toapp/repair-shop.txt');
+	$("#restaurant-and-bar").load('http://apps.mylokal.ph/toapp/restaurant-and-bar.txt');
+	$("#review-tutorial-center").load('http://apps.mylokal.ph/toapp/review-tutorial-center.txt');
+	$("#room").load('http://apps.mylokal.ph/toapp/room.txt');
+	$("#school-bus").load('http://apps.mylokal.ph/toapp/school-bus.txt');
+	$("#schools").load('http://apps.mylokal.ph/toapp/schools.txt');
+	$("#seaport").load('http://apps.mylokal.ph/toapp/seaport.txt');
+	$("#spa").load('http://apps.mylokal.ph/toapp/spa.txt');
+	$("#sports-hobby-shop").load('http://apps.mylokal.ph/toapp/sports-hobby-shop.txt');
+	$("#tailoring").load('http://apps.mylokal.ph/toapp/tailoring.txt');
+	$("#tattoo-piercing").load('http://apps.mylokal.ph/toapp/tattoo-piercing.txt');
+	$("#taxi-terminal").load('http://apps.mylokal.ph/toapp/taxi-terminal.txt');
+	$("#telecommunication").load('http://apps.mylokal.ph/toapp/telecommunication.txt');
+	$("#theme-park").load('http://apps.mylokal.ph/toapp/theme-park.txt');
+	$("#tourist-spot").load('http://apps.mylokal.ph/toapp/tourist-spot.txt');
+	$("#townhouse").load('http://apps.mylokal.ph/toapp/townhouse.txt');
+	$("#training-center").load('http://apps.mylokal.ph/toapp/training-center.txt');
+	$("#travel-agency").load('http://apps.mylokal.ph/toapp/travel-agency.txt');
+	$("#travel-inn").load('http://apps.mylokal.ph/toapp/travel-inn.txt');
+	$("#tv-station").load('http://apps.mylokal.ph/toapp/tv-station.txt');
+	$("#van-terminal").load('http://apps.mylokal.ph/toapp/van-terminal.txt');
+	$("#veterinary").load('http://apps.mylokal.ph/toapp/veterinary.txt');
+	$("#water-park").load('http://apps.mylokal.ph/toapp/water-park.txt');
+	$("#water-refilling-station").load('http://apps.mylokal.ph/toapp/water-refilling-station.txt');
+	$("#wines-and-spirits").load('http://apps.mylokal.ph/toapp/wines-and-spirits.txt');
+	
+	  
+		   $(document).ajaxSuccess(function() {
+var advertising = 	$('#advertising').html();
+var agribusiness = $('#agri-business').html();
+var airport = $('#airport').html();
+var apartment = $('#apartment').html();
+var applianceelectronics = $('#appliance-electronics').html();
+var arcadegame = $('#arcade-game').html();
+var arenagymnasium = $('#arena-gymnasium').html();
+var automobiledealer = $('#auto-mobile-dealer').html();
+var autopartsandservices = $('#auto-parts-and-services').html();
+var bank = $('#bank').html();
+var barangayhall = $('#barangay-hall').html();
+var barbershop = $('#barber-shop').html();
+var beachresort = $('#beach-resort').html();
+var beautyproducts = $('#beauty-products').html();
+var beautysalo = $('#beauty-salo').html();
+var bedandbreakfast = $('#bed-and-breakfast').html();
+var bookingoffice = $('#booking-office').html();
+var bookstoreandcopier = $('#bookstore-and-copier').html();
+var boutiquegarments = $('#boutique-garments').html();
+var breadandcoffee = $('#bread-and-coffee').html();
+var buildersandconstruction = $('#builders-and-construction').html();
+var busterminal = $('#bus-terminal').html();
+var canteeneatery = $('#canteen-eatery').html();
+var capitolandmunicipalhall = $('#capitol-and-municipalhall').html();
+var casino = $('#casino').html();
+var cateringservices = $('#catering-services').html();
+var church = $('#church').html();
+var cinema = $('#cinema').html();
+var cleaningandsanitation = $('#cleaning-and-sanitation').html();
+var clinic = $('#clinic').html();
+var collegeuniversity = $('#college-university').html();
+var computerservices = $('#computer-services').html();
+var condounits = $('#condo-units').html();
+var conveniencestore = $('#convenience-store').html();
+var courier = $('#courier').html();
+var daycare = $('#daycare').html();
+var dental = $('#dental').html();
+var dermafacialcenter = $('#derma-facial-center').html();
+var distributor = $('#distributor').html();
+var dormandbedspace = $('#dorm-and-bedspace').html();
+var drivingschool = $('#driving-school').html();
+var drugstoremedical = $('#drugstore-medical').html();
+var drugtesting = $('#drug-testing').html();
+var ecoadventure = $('#eco-adventure').html();
+var EENTclinic = $('#EENT-clinic').html();
+var eventservices = $('#event-services').html();
+var fastfood = $('#fastfood').html();
+var fireandrescue = $('#fire-and-rescue').html();
+var flowergarden = $('#flower-garden').html();
+var foodcart = $('#foodcart').html();
+var foodproducts = $('#food-products').html();
+var funeralandmemorial = $('#funeral-and-memorial').html();
+var furnituresdecors = $('#furnitures-decors').html();
+var gadgetshop = $('#gadget-shop').html();
+var gasolinestation = $('#gasoline-station').html();
+var generalmerchandise = $('#general-merchandise').html();
+var generalrepair = $('#general-repair').html();
+var groceryandsupermarket = $('#grocery-and-supermarket').html();
+var gym = $('#gym').html();
+var handicrafts = $('#handicrafts').html();
+var hardware = $('#hardware').html();
+var hospital = $('#hospital').html();
+var hotel = $('#hotel').html();
+var insurance = $('#insurance').html();
+var internetshop = $('#internet-shop').html();
+var ITBPO = $('#IT-BPO').html();
+var jeepneyterminal = $('#jeepney-terminal').html();
+var jewelryaccessories = $('#jewelry-accessories').html();
+var junkscrapmetal = $('#junk-scrap-metal').html();
+var laundryshop = $('#laundry-shop').html();
+var lawoffice = $('#law-office').html();
+var lendingfinance = $('#lending-finance').html();
+var lottooutlet = $('#lotto-outlet').html();
+var lpgstation = $('#lpg-station').html();
+var ltoltfrb = $('#lto-ltfrb').html();
+var machinewelding = $('#machine-welding').html();
+var mallshoppingcenter = $('#mall-shopping-center').html();
+var manpowerservices = $('#manpower-services').html();
+var manufacturer = $('#manufacturer').html();
+var meatfishproduce = $('#meat-fish-produce').html();
+var moneygramremittance = $('#moneygram-remittance').html();
+var mosques = $('#mosques').html();
+var motorcycledealer = $('#motor-cycle-dealer').html();
+var musicdance = $('#music-dance').html();
+var musicinstrumentshops = $('#music-instrument-shops').html();
+var newspaperandmagazine = $('#newspaper-and-magazine').html();
+var ngo = $('#ngo').html();
+var notarypublic = $('#notary-public').html();
+var noveltystore = $('#novelty-store').html();
+var OBGYNE = $('#OB-GYNE').html();
+var onlinesellers = $('#online-sellers').html();
+var pasalubongshop = $('#pasalubong-shop').html();
+var pawnshop = $('#pawnshop').html();
+var pediatrics = $('#pediatrics').html();
+var petshop = $('#pet-shop').html();
+var pharmaceutical = $('#pharmaceutical').html();
+var policestation = $('#police-station').html();
+var postoffice = $('#post-office').html();
+var radiostation = $('#radio-station').html();
+var regionalgovtcenter = $('#regional-govt-center').html();
+var religiousstore = $('#religious-store').html();
+var repairshop = $('#repair-shop').html();
+var restaurantandbar = $('#restaurant-and-bar').html();
+var reviewtutorialcenter = $('#review-tutorial-center').html();
+var room = $('#room').html();
+var schoolbus = $('#school-bus').html();
+var schools = $('#schools').html();
+var seaport = $('#seaport').html();
+var spa = $('#spa').html();
+var sportshobbyshop = $('#sports-hobby-shop').html();
+var tailoring = $('#tailoring').html();
+var tattoopiercing = $('#tattoo-piercing').html();
+var taxiterminal = $('#taxi-terminal').html();
+var telecommunication = $('#telecommunication').html();
+var themepark = $('#theme-park').html();
+var touristspot = $('#tourist-spot').html();
+var townhouse = $('#townhouse').html();
+var trainingcenter = $('#training-center').html();
+var travelagency = $('#travel-agency').html();
+var travelinn = $('#travel-inn').html();
+var tvstation = $('#tv-station').html();
+var vanterminal = $('#van-terminal').html();
+var veterinary = $('#veterinary').html();
+var waterpark = $('#water-park').html();
+var waterrefillingstation = $('#water-refilling-station').html();
+var winesandspirits = $('#wines-and-spirits').html();
+
+
+window.localStorage.setItem("advertising", advertising);
+window.localStorage.setItem("agri-business", agribusiness);
+window.localStorage.setItem("airport", airport);
+window.localStorage.setItem("apartment", apartment);
+window.localStorage.setItem("appliance-electronics", applianceelectronics);
+window.localStorage.setItem("arcade-game", arcadegame);
+window.localStorage.setItem("arena-gymnasium", arenagymnasium);
+window.localStorage.setItem("auto-mobile-dealer", automobiledealer);
+window.localStorage.setItem("auto-parts-and-services", autopartsandservices);
+window.localStorage.setItem("bank", bank);
+window.localStorage.setItem("barangay-hall", barangayhall);
+window.localStorage.setItem("barber-shop", barbershop);
+window.localStorage.setItem("beach-resort", beachresort);
+window.localStorage.setItem("beauty-products", beautyproducts);
+window.localStorage.setItem("beauty-salo", beautysalo);
+window.localStorage.setItem("bed-and-breakfast", bedandbreakfast);
+window.localStorage.setItem("booking-office", bookingoffice);
+window.localStorage.setItem("bookstore-and-copier", bookstoreandcopier);
+window.localStorage.setItem("boutique-garments", boutiquegarments);
+window.localStorage.setItem("bread-and-coffee", breadandcoffee);
+window.localStorage.setItem("builders-and-construction", buildersandconstruction);
+window.localStorage.setItem("bus-terminal", busterminal);
+window.localStorage.setItem("canteen-eatery", canteeneatery);
+window.localStorage.setItem("capitol-and-municipalhall", capitolandmunicipalhall);
+window.localStorage.setItem("casino", casino);
+window.localStorage.setItem("catering-services", cateringservices);
+window.localStorage.setItem("church", church);
+window.localStorage.setItem("cinema", cinema);
+window.localStorage.setItem("cleaning-and-sanitation", cleaningandsanitation);
+window.localStorage.setItem("clinic", clinic);
+window.localStorage.setItem("college-university", collegeuniversity);
+window.localStorage.setItem("computer-services", computerservices);
+window.localStorage.setItem("condo-units", condounits);
+window.localStorage.setItem("convenience-store", conveniencestore);
+window.localStorage.setItem("courier", courier);
+window.localStorage.setItem("daycare", daycare);
+window.localStorage.setItem("dental", dental);
+window.localStorage.setItem("derma-facial-center", dermafacialcenter);
+window.localStorage.setItem("distributor", distributor);
+window.localStorage.setItem("dorm-and-bedspace", dormandbedspace);
+window.localStorage.setItem("driving-school", drivingschool);
+window.localStorage.setItem("drugstore-medical", drugstoremedical);
+window.localStorage.setItem("drug-testing", drugtesting);
+window.localStorage.setItem("eco-adventure", ecoadventure);
+window.localStorage.setItem("EENT-clinic", EENTclinic);
+window.localStorage.setItem("event-services", eventservices);
+window.localStorage.setItem("fastfood", fastfood);
+window.localStorage.setItem("fire-and-rescue", fireandrescue);
+window.localStorage.setItem("flower-garden", flowergarden);
+window.localStorage.setItem("foodcart", foodcart);
+window.localStorage.setItem("food-products", foodproducts);
+window.localStorage.setItem("funeral-and-memorial", funeralandmemorial);
+window.localStorage.setItem("furnitures-decors", furnituresdecors);
+window.localStorage.setItem("gadget-shop", gadgetshop);
+window.localStorage.setItem("gasoline-station", gasolinestation);
+window.localStorage.setItem("general-merchandise", generalmerchandise);
+window.localStorage.setItem("general-repair", generalrepair);
+window.localStorage.setItem("grocery-and-supermarket", groceryandsupermarket);
+window.localStorage.setItem("gym", gym);
+window.localStorage.setItem("handicrafts", handicrafts);
+window.localStorage.setItem("hardware", hardware);
+window.localStorage.setItem("hospital", hospital);
+window.localStorage.setItem("hotel", hotel);
+window.localStorage.setItem("insurance", insurance);
+window.localStorage.setItem("internet-shop", internetshop);
+window.localStorage.setItem("IT-BPO", ITBPO);
+window.localStorage.setItem("jeepney-terminal", jeepneyterminal);
+window.localStorage.setItem("jewelry-accessories", jewelryaccessories);
+window.localStorage.setItem("junk-scrap-metal", junkscrapmetal);
+window.localStorage.setItem("laundry-shop", laundryshop);
+window.localStorage.setItem("law-office", lawoffice);
+window.localStorage.setItem("lending-finance", lendingfinance);
+window.localStorage.setItem("lotto-outlet", lottooutlet);
+window.localStorage.setItem("lpg-station", lpgstation);
+window.localStorage.setItem("lto-ltfrb", ltoltfrb);
+window.localStorage.setItem("machine-welding", machinewelding);
+window.localStorage.setItem("mall-shopping-center", mallshoppingcenter);
+window.localStorage.setItem("manpower-services", manpowerservices);
+window.localStorage.setItem("manufacturer", manufacturer);
+window.localStorage.setItem("meat-fish-produce", meatfishproduce);
+window.localStorage.setItem("moneygram-remittance", moneygramremittance);
+window.localStorage.setItem("mosques", mosques);
+window.localStorage.setItem("motor-cycle-dealer", motorcycledealer);
+window.localStorage.setItem("music-dance", musicdance);
+window.localStorage.setItem("music-instrument-shops", musicinstrumentshops);
+window.localStorage.setItem("newspaper-and-magazine", newspaperandmagazine);
+window.localStorage.setItem("ngo", ngo);
+window.localStorage.setItem("notary-public", notarypublic);
+window.localStorage.setItem("novelty-store", noveltystore);
+window.localStorage.setItem("OB-GYNE", OBGYNE);
+window.localStorage.setItem("online-sellers", onlinesellers);
+window.localStorage.setItem("pasalubong-shop", pasalubongshop);
+window.localStorage.setItem("pawnshop", pawnshop);
+window.localStorage.setItem("pediatrics", pediatrics);
+window.localStorage.setItem("pet-shop", petshop);
+window.localStorage.setItem("pharmaceutical", pharmaceutical);
+window.localStorage.setItem("police-station", policestation);
+window.localStorage.setItem("post-office", postoffice);
+window.localStorage.setItem("radio-station", radiostation);
+window.localStorage.setItem("regional-govt-center", regionalgovtcenter);
+window.localStorage.setItem("religious-store", religiousstore);
+window.localStorage.setItem("repair-shop", repairshop);
+window.localStorage.setItem("restaurant-and-bar", restaurantandbar);
+window.localStorage.setItem("review-tutorial-center", reviewtutorialcenter);
+window.localStorage.setItem("room", room);
+window.localStorage.setItem("school-bus", schoolbus);
+window.localStorage.setItem("schools", schools);
+window.localStorage.setItem("seaport", seaport);
+window.localStorage.setItem("spa", spa);
+window.localStorage.setItem("sports-hobby-shop", sportshobbyshop);
+window.localStorage.setItem("tailoring", tailoring);
+window.localStorage.setItem("tattoo-piercing", tattoopiercing);
+window.localStorage.setItem("taxi-terminal", taxiterminal);
+window.localStorage.setItem("telecommunication", telecommunication);
+window.localStorage.setItem("theme-park", themepark);
+window.localStorage.setItem("tourist-spot", touristspot);
+window.localStorage.setItem("townhouse", townhouse);
+window.localStorage.setItem("training-center", trainingcenter);
+window.localStorage.setItem("travel-agency", travelagency);
+window.localStorage.setItem("travel-inn", travelinn);
+window.localStorage.setItem("tv-station", tvstation);
+window.localStorage.setItem("van-terminal", vanterminal);
+window.localStorage.setItem("veterinary", veterinary);
+window.localStorage.setItem("water-park", waterpark);
+window.localStorage.setItem("water-refilling-station", waterrefillingstation);
+window.localStorage.setItem("wines-and-spirits", winesandspirits);
+			  //  alert(advstr);
+		$("#updated").load('http://apps.mylokal.ph/toapp/updated.txt');
+			var strupdated = 	$('#updated').html();	
+		localStorage.setItem('updated', strupdated);
+        window.location.href = "index.html";
+
+   		  });
+	   }, 1000);
+	  //window.location.href = "index.html";
+
+          // }else{
+          //   alert('already updated and online!');
+			 //window.location.href = "index.html";
+           // };
+
+
+
+		 }
+		</script>
+     <!--      <script type="text/javascript">
+            app.initialize();
+        </script> -->
+    </body>
+</html>

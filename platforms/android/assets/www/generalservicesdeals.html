@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>General Services Deals</title> 
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png"/>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile-1.4.2.min.css">
+	<link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css">
+	<script src="assets/jqm/js/jquery.js"></script>
+	<script src="assets/jqm/_assets/js/index.js"></script>
+	<script src="assets/jqm/js/jquery.mobile-1.4.2.min.js"></script>
+    <script src="cordova.js"></script>
+    
+    
+     <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("online", onOnline, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+    }
+
+    // Handle the online event
+    //
+    function onOnline() {
+        alert ("device is online");
+    }
+
+    </script>
+   
+</head> 
+<body onload="onLoad">
+
+    
+<div data-role="page"><!-- page -->
+ <!-- header -->
+    <!-- <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="b" style="background: -webkit-gradient(linear, center top, center bottom, from(#738aba), to(#2c4987));
+background: -webkit-linear-gradient(#738aba, #2c4987);
+border-bottom: 1px solid #111a33;
+-webkit-box-shadow: inset 0 1px 1px -1px #fff;
+-webkit-box-sizing: border-box;">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;" alt="logo"></h1>
+        <a href="index.html" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);" data-role="button" role="button">home</a>
+         <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);">back</a>
+    </div> -->
+    <!-- <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="d" data-position="fixed">
+		<h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;" alt="Mylokal.ph"></h1>
+    	<a href="#nav-panel" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" data-role="button" role="button">menu</a>
+        <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text">back</a> 
+    </div> -->
+
+<!-- slider -->
+<script src="assets/slider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript">
+			$(window).load(function() {
+				$('.flexslider').flexslider({
+				  animation: "slide",
+				  controlsContainer: ".flex-container"
+			  });
+			});
+		</script>
+
+    <div class="flex-container" style="margin: 10px 7px;">
+		<div class="flexslider">
+		    <ul class="slides">
+		    	<li>
+		    		<img src="assets/images/1.jpg" alt="slide">
+		    		<!--<p class="flex-caption">SAMPLE ADS TEXT SLIDE</p> -->
+	    	  	</li>
+		    	<li>
+		    		<img src="assets/images/2.jpg" alt="slide">
+		    		<!-- <p class="flex-caption"> &laquo; Swipe Horizontally with Finger &raquo;</p> -->
+	    	  	</li>
+		    	<li>
+		    		<img src="assets/images/3.jpg" alt="slide">                </li>
+		    	<li>
+		    		<img src="assets/images/4.jpg" alt="slide">                </li>
+		    </ul>
+		</div>
+	</div> <!-- end slider -->
+ <!--<div class="shadow1box"><img src="assets/images/shadow1.png" class="shadow1" alt="shadow"></div>-->
+   	<!-- <div data-role="content" style="padding:5px" >
+    
+    		<ul class="gallery">
+		
+			<li><a href="generalservices.html" rel="external"><img src="assets/images/generalservices.png" alt="General Services" /></a></li>
+			<li><a href="localindustries.html" rel="external"><img src="assets/images/localindustries.png" alt="Local Industries" /></a></li>
+            <li><a href="food-drinks.html" rel="external"><img src="assets/images/foodanddrinks.png" alt="Food and Drinks" /></a></li>
+			<li><a href="lodging.html" rel="external"><img src="assets/images/lodging.png" alt="Lodging" /></a></li>
+            <li><a href="govt-services.html" rel="external"><img src="assets/images/govservices.png" alt="Government Services" /></a></li>
+			<li><a href="tourist-spot.html" rel="external"><img src="assets/images/tourism.png" alt="Tourism" /></a></li>
+			<li><a href="shops.html" rel="external"><img src="assets/images/shops.png" alt="Shops" /></a></li>
+			<li><a href="transportation.html" rel="external"><img src="assets/images/transpo.png" alt="Transportation" /></a></li>
+            <li><a href="health-wellness.html" rel="external"><img src="assets/images/healthandmedicine.png" alt="Health and Medicine" /></a></li>
+			<li><a href="bsf.html" rel="external"><img src="assets/images/bsf.png" alt="Beauty, Style & Fitness" /></a></li>
+            <li><a href="peso.html" rel="external"><img src="assets/images/bank.png" alt="Peso" /></a></li>
+			<li><a href="sports-recreation.html" rel="external"><img src="assets/images/sportsandrecreation.png" alt="Entertainment & Sports" /></a></li>
+			<li><a href="classified.html" rel="external"><img src="assets/images/classified.png" alt="Classified Ads" /></a></li>
+			<li><a href="learning-center.html" rel="external"><img src="assets/images/learningcenters.png" alt="Learning Centers" /></a></li>
+            <li><a href="deals.html" rel="external"><img src="assets/images/deals.png" alt="Deals" /></a></li>
+			<li><a href="genser.html" rel="external"><img src="assets/images/contactus.png" alt="Contact Us" /></a></li>
+            </ul> -->
+  	
+   
+	<!-- social -->
+ <!--<div class="social">
+    	<a href="http://localhost/mylokal-mobile/beta1/mobile/"><img src="assets/images/social/home.png" alt="facebook"></a>
+    	<a href="#"><img src="assets/images/social/facebook.png" alt="facebook"></a>
+    	<a href="#"><img src="assets/images/social/refresh.png" alt="linkedin"></a>
+    	<a href="#"><img src="assets/images/social/dribble.png" alt="dribble"></a>
+    	<a href="#"><img src="assets/images/social/desktop.png" alt="twitter"></a>
+        <a href="#"><img src="assets/images/social/back.png" alt="twitter"></a>
+        <a href="#"><img src="assets/images/social/forward.png" alt="twitter"></a>
+        <a href="#"><img src="assets/images/social/register.png" alt="twitter"></a>
+    </div> -->
+    <!-- /social -->
+
+
+    
+  </div>
+  <!-- /main content -->    
+   <!-- <div data-role="footer" data-position="fixed" style="background: -webkit-gradient(linear, center top, center bottom, from(#738aba), to(#2c4987));
+background: -webkit-linear-gradient(#738aba, #2c4987);	
+border-bottom: 1px solid #111a33;
+-webkit-box-shadow: inset 0 1px 1px -1px #fff;
+-webkit-box-sizing: border-box;" data-position="fixed">
+    	<h1 class="ui-title">© 2013 Mylokal.ph - Powered by Mobile Lab Inc</h1>
+
+
+
+	</div> -->
+
+
+</div>
+<!-- /page -->  
+
+<!-- <div data-role="footer" data-fullscreen="true" data-position="fixed" data-theme="b" role="contentinfo" class="ui-footer ui-bar-a ui-footer-fixed slideup">
+		<div data-role="navbar" class="ui-navbar" role="navigation">
+			<ul class="ui-grid-c">
+				<li class="ui-block-a"><a href="index.html" data-prefetch="true" data-transition="fade" class="ui-btn ui-btn-active">Info</a></li>
+				<li class="ui-block-b"><a href="page-b.html" data-prefetch="true" data-transition="flip" class="ui-btn">Friends</a></li>
+				<li class="ui-block-c"><a href="page-c.html" data-prefetch="true" data-transition="turn" class="ui-btn">Albums</a></li>
+				<li class="ui-block-d"><a href="page-d.html" data-prefetch="true" data-transition="slide" class="ui-btn">Emails</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	<!-- </div> -->
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+<!-- SCRIPTS -->
+
+<!-- add to homepage bubble on iphone, ipad  -->
+<script type="text/javascript">
+	if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
+		document.write('<link rel="stylesheet" href="assets\/add-bubble\/style\/add2home.css">');
+		document.write('<script type="application\/javascript" src="assets\/add-bubble\/src\/add2home.js" charset="utf-8"><\/s' + 'cript>');
+	}
+</script>
+<!-- /add to homepage bubble on iphone, ipad  --> 
+
+</body>
+</html>

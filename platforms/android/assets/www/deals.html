@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+	    <link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile-1.4.2.min.css">
+		<link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css">
+        
+        <title>MYLOKAL.PH</title>
+   		<script src="assets/jqm/js/jquery.js"></script>
+		<script src="assets/jqm/js/jquery.mobile-1.4.2.min.js"></script>
+ </head>
+ <body>
+<div data-role="page">
+    
+   <!-- header -->
+     <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="d" data-position="fixed">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;" alt="Mylokal.ph"></h1>
+         <a href="#nav-panel" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" data-role="button" role="button">menu</a>
+         <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text">back</a> 
+    </div>
+    
+  <div data-role="panel" data-display="push" data-theme="a" id="nav-panel">
+        <ul data-role="listview">
+            	<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li><a href="generalservices.html" data-rel="external" data-ajax="false" class="ui-no-icon ui-btn panelimg"><img src="assets/images/generalservices.png" alt="General Services" class="ui-li-icon ui-corner-none">General Services</a></li>
+    
+				<li><a href="localindustries.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/localindustries.png" alt="Local Industries" class="ui-li-icon ui-corner-none">Local Industries</a></li>
+
+				<li><a href="food-drinks.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/foodanddrinks.png" alt="Food" class="ui-li-icon ui-corner-none">Food and Drinks</a></li>
+	
+    			<li><a href="lodging.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/lodging.png" alt="lodging" class="ui-li-icon ui-corner-none">Lodging</a></li>
+	
+    			<li><a href="govt-services.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/govservices.png" alt="govt" class="ui-li-icon ui-corner-none">Government Services</a></li>
+	
+			    <li><a href="tourist-spot.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/touristspots.png" alt="tourist" class="ui-li-icon ui-corner-none">Tourism</a></li>
+	
+    			<li><a href="shops.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/shops.png" alt="shops" class="ui-li-icon ui-corner-none">Shops</a></li>
+	
+    			<li><a href="transportation.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/transportation.png" alt="transportation" class="ui-li-icon ui-corner-none">Transportation</a></li>
+
+				<li><a href="health-wellness.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/healthandwellness.png" alt="healthandwellness" class="ui-li-icon ui-corner-none">Health and Wellness</a></li>
+	
+    			<li><a href="peso.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/peso.png" alt="peso" class="ui-li-icon ui-corner-none">Peso</a></li>
+
+				<li><a href="sports-recreation.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/sportsandrecreation.png" alt="sportsandrecreation" class="ui-li-icon ui-corner-none">Sports and Recreation</a></li>
+
+				<li><a href="rentals.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/rentals.png" alt="rentals" class="ui-li-icon ui-corner-none">Sale and Rentals</a></li>
+	
+    			<li><a href="jobs.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/jobs.png" alt="jobs" class="ui-li-icon ui-corner-none">Jobs</a></li>
+	
+    			<li><a href="learning-center.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/learningcenters.png" alt="learningcenters" class="ui-li-icon ui-corner-none">Learning Centers</a></li>     
+
+			    <li><a href="deals.html" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/deals.png" alt="deals" class="ui-li-icon ui-corner-none">Deals</a></li>     
+
+			    <li><a href="#" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/deals.png" alt="contact-us" class="ui-li-icon ui-corner-none">Contact Us</a></li>     
+        
+         <li data-inset="false" data-icon="false" data-iconpos="right" style="padding: 0;" class="ui-li-has-icon ui-last-child"><a href="http://mylokal.ph/about" data-rel="external" data-ajax="false" class="ui-btn panelimg"><img src="assets/images/info-icon.png" alt="aboutus" class="ui-li-icon ui-corner-none">About Us</a></li> 
+            
+        </ul>
+                
+     </div><!-- /panel -->
+    <div data-role="tabs" id="tabs">
+	<div data-role="content">
+  	<div data-role="navbar" class="ui-content">
+    <br>
+    <br>
+    <h1>Deals</h1>
+    <ul>
+      <li style="width: 100%;"><a href="#one" data-transition="slide" class="ui-btn-active">General Services</a></li>
+        	<div id="one">
+<div data-role="ui-content">
+    
+   
+		<div>
+		    <ul>
+		    	<li><a href="#">
+		    		<img src="assets/images/1.jpg" alt="slide" width="100%">
+		    		<!--<p class="flex-caption">SAMPLE ADS TEXT SLIDE</p> --></a>
+	    	  	</li>
+		    	<li><a href="#">
+		    		<img src="assets/images/2.jpg" alt="slide" width="100%">
+		    		<!-- <p class="flex-caption"> &laquo; Swipe Horizontally with Finger &raquo;</p> --></a>
+	    	  	</li>
+		    	<li><a href="#">
+		    		<img src="assets/images/3.jpg" alt="slide" width="100%">
+                    </a>                </li>
+		    	<li><a href="#">
+		    		<img src="assets/images/4.jpg" alt="slide" width="100%">               </a> </li>
+		    </ul>
+		</div>
+	</div>
+
+	</div>
+     <li style="width: 100%;"><a href="#two" data-transition="slide">Local Industries</a></li>
+   <li style="width: 100%;"><a href="#three" data-transition="slide">Food & Drinks</a></li>
+   <li style="width: 100%;"><a href="#four" data-transition="slide">Lodging</a></li>
+     <li style="width: 100%;"><a href="#five" data-transition="slide">Tourism</a></li>
+   <li style="width: 100%;"><a href="#six" data-transition="slide">Shops</a></li>
+   <li style="width: 100%;"><a href="#seven" data-transition="slide">Transportation</a></li>
+     <li style="width: 100%;"><a href="#eight" data-transition="slide">Health & Medicine</a></li>
+   <li style="width: 100%;"><a href="#nine" data-transition="slide">Entertainment & Sports</a></li>
+   <li style="width: 100%;"><a href="#ten" data-transition="slide">Beauty, Style & Fitness</a></li>
+   <li style="width: 100%;"><a href="#eleven" data-transition="slide">Learning Center</a></li>
+
+      <!--fb://publish/?text=www.domain.com-->
+	  </ul>
+  	</div>
+  	</div>
+
+	
+
+</div>
+</body>
+</html>    

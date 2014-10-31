@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>Mylokal.ph | General Services</title> 
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png"/>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700"> -->
+	<link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile-1.4.2.min.css">
+	<link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css">
+	<script src="assets/jqm/js/jquery.js"></script>
+	<script src="assets/jqm/_assets/js/index.js"></script>
+	<script src="assets/jqm/js/jquery.mobile-1.4.2.min.js"></script>
+    <!-- scripts -->
+	<script type="text/javascript" src="js/mylokaljson.js"></script>
+	<script type="text/javascript" src="js/jquery.mylokaljson.js"></script>
+  
+  
+   <!-- <link rel="stylesheet" href="assets/jqm/css/themes/default/jquery.mobile.css">
+	<link rel="stylesheet" href="assets/jqm/_assets/css/jqm-demos.css"> -->
+    <!-- scripts -->
+
+    
+   	<!--<script src="assets/jqm/external/jquery/jquery.js"></script>
+	<script src="assets/jqm/_assets/js/"></script>
+	<script src="assets/jqm/js/"></script>-->
+
+
+   
+</head> 
+
+<body>
+
+<div data-role="page">
+    
+   <!-- header -->
+    <!-- <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="b" style="background: -webkit-gradient(linear, center top, center bottom, from(#738aba), to(#2c4987));
+background: -webkit-linear-gradient(#738aba, #2c4987);
+border-bottom: 1px solid #111a33;
+-webkit-box-shadow: inset 0 1px 1px -1px #fff;
+-webkit-box-sizing: border-box;" data-position="fixed">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;"></h1>
+         <a href="index.html" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);" data-role="button" role="button">home</a>
+         <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text" style="border-color: #2a3349 #2a3a64 #253662;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .21), 0 1px 0 rgba(255, 255, 255, .17);background: -webkit-gradient(linear, center top, center bottom, from(#647aab), to(#2c467e));  background: -webkit-linear-gradient(#647aab, #2c467e);">back</a> 
+    </div> -->
+    <div class="ui-header ui-bar-b" role="banner" data-role="header" data-theme="d" data-position="fixed">
+        <h1 aria-level="1" role="heading" class="ui-title"><img src="assets/images/mobile-logo.png" style="width: 100%; max-width:100px;" alt="Mylokal.ph"></h1>
+        <a href="#nav-panel" data-ajax="false" class="ui-link ui-btn-left ui-btn-text" data-role="button" role="button">menu</a>
+        <a href="#right-panel" data-shadow="false" data-iconshadow="false" data-rel="back" class="ui-link ui-btn-right ui-btn-text">back</a> 
+    </div>
+    
+	
+    <div data-role="content">
+    
+ <ul data-role="listview" data-inset="true" class="secondaryitemul ui-listview ui-listview-inset">
+    <li class="ui-li-has-thumb secondaryitemli secondaryitemlifirst">
+    <a href="accountingfirm.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false"  style="background-color: #9f00bb;margin-bottom: 8px;">
+        <img src="assets/images/ge/accounting.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Accounting Firm</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="advertising.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" rel="external" style="background-color: #0064e9;margin-bottom: 8px;">
+        <img src="assets/images/ge/advertise.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Advertising</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="bookstoreandcopier.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" style="background-color: #209bff; margin-bottom: 8px;">
+        <img src="assets/images/ge/bookstore.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Bookstores & Copier</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="courier.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #f1b124; margin-bottom: 8px;">
+         <img src="assets/images/ge/courier.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Courier</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="eventservices.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #e90076; margin-bottom: 8px;">
+        <img src="assets/images/ge/events.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Events Services</h2></a>
+    </li>	
+    <li class="ui-li-has-thumb secondaryitemli"><a href="funeral.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #a05100; margin-bottom: 8px;">
+         <img src="assets/images/ge/funeral.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Funeral & Memorial</h2></a>
+    </li>
+        <li class="ui-li-has-thumb secondaryitemli"><a href="gasolinestation.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #f2b424; margin-bottom: 8px;">
+        <img src="assets/images/ge/gas.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Gasoline Station</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="generalrepair.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #0065e9; margin-bottom: 8px;">
+        <img src="assets/images/ge/repair.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">General Repairs</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="groceryandsupermarket.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #219bff; margin-bottom: 8px;">
+        <img src="assets/images/ge/supermarket.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Grocery & Supermarket</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="lawoffice.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #219bff; margin-bottom: 8px;">
+        <img src="assets/images/ge/lawoffice.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Law Office</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="lpgstationanddealer.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #97ca00; margin-bottom: 8px;">
+        <img src="assets/images/ge/lpg.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">LPG Station & Dealer</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="manpowerservices.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #9f00bb; margin-bottom: 8px;">
+        <img src="assets/images/ge/manpower.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Manpower Services</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="newspaperandmagazine.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #00a335; margin-bottom: 8px;">
+        <img src="assets/images/ge/news.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Newspaper & Magazine</h2></a>
+    </li>
+
+    <li class="ui-li-has-thumb secondaryitemli"><a href="notarypublic.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #f1b324; margin-bottom: 8px;">
+        <img src="assets/images/ge/notary.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Notary Public</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="radiostation.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #27a83f; margin-bottom: 8px;">
+        <img src="assets/images/ge/radiostation.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Radio Station</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="telecommunications.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #005AC6">
+        <img src="assets/images/generalservices.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">Telecommunication</h2></a>
+    </li>
+    <li class="ui-li-has-thumb secondaryitemli"><a href="tvstationjson.html" class="ui-btn ui-btn-icon-right ui-nodisc-icon secondaryitemli" data-rel="external" data-ajax="false" style="background-color: #209bff">
+        <img src="assets/images/ge/tvstation.png">
+    <h2 style="line-height: 2.5; color: #FFF; text-shadow: none;">TV Station</h2></a>
+    </li>
+	</ul>
+
+	</div><!-- /content -->
+
+	    <!-- footer -->
+    
+   <!--  <div class="ui-footer ui-bar-a" data-role="footer" data-theme="a" data-position="fixed">
+    	<h1 class="ui-title">© 2013 Mylokal.ph - Powered by Mobile Lab Inc</h1>
+
+
+
+	</div>  -->
+
+
+	
+</div><!-- /page -->
+
+
+</body>
+</html>
